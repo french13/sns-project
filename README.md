@@ -1,11 +1,34 @@
-구버전 강좌는 old branch에 있습니다.
-리뉴얼 강좌 소스 코드는 master 브랜치에 있습니다.
-리뉴얼 강좌의 ch7는 prepare 폴더입니다.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-toolkit 적용하고 싶으신 분들을 위해 toolkit 폴더에 소스 코드 정리해두었습니다.
-Credits to [소라연](https://github.com/sorayeon/react-nodebird-toolkit)
+## Getting Started
 
-버그가 있을 시 인프런이나 깃헙 issue로 남겨주시면 빠르게 해결하겠습니다.
+First, run the development server:
 
-[https://nodebird.com](https://nodebird.com)에서 실제 실행 결과물을 확인하실 수 있습니다.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
