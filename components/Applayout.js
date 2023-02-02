@@ -5,7 +5,7 @@ import { Input, Menu, Row, Col, Button } from "antd";
 import LoginForm from "./LoginForm";
 import UserProfile from "./UserProfile";
 import styled from "styled-components";
-
+import { useSelector } from "react-redux";
 const SearchInput  = styled(Input.Search)`
 vertical-align : middle
 `
@@ -13,10 +13,11 @@ vertical-align : middle
 
 
 const Applayout = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const isLoggedIn = useSelector((state) => {return state.user.isLoggedIn})
+
   const style = useMemo(()=>({width : "100%"}), [])
 
-
+  console.log(isLoggedIn)
   return (
     <div>
       <Row >
@@ -36,7 +37,7 @@ const Applayout = ({ children }) => {
       <Row gutter={8}>
         <Col xs={24} md={6}>
           {
-            isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn}/>
+            isLoggedIn ? <UserProfile  /> : <LoginForm />
           }
         </Col>
         <Col xs={24} md={12}>

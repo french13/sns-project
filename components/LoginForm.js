@@ -1,7 +1,9 @@
 import { Button, Form, Input } from "antd";
 import Link from "next/link";
 import React, { useState, useCallback } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { loginAction } from "../store/slice";
 
 const ButtonWrapper = styled.div`
   margin-top: 10px;
@@ -15,6 +17,7 @@ padding : 10px
 const LoginForm = ({ setIsLoggedIn }) => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch()
 
   // components에서 props로 넘기는 기능들은 useCallback을 써서 최적화 하기
   const onChangeId = useCallback((e) => {
@@ -25,7 +28,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
   }, []);
 
   const onSubmitForm = useCallback(() => {
-    setIsLoggedIn(true);
+      dispatch(loginAction({id, password}))
   }, [id, password]);
 
 

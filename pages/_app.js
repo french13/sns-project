@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 
 import Head from "next/head";
+import wrapper from "../store/configureStore";
+import PropTypes from 'prop-types'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,4 +16,8 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+MyApp.propTypes = {
+  Component : PropTypes.elementType.isRequired,
+}
+
+export default wrapper.withRedux(MyApp) ;
