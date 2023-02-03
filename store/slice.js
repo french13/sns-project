@@ -10,10 +10,22 @@ const initialState = {
     signUpdata: {},
     loginData: {},
   },
-  mainPost: {
-    mainPosts: [postContent],
-  },
 };
+
+const initialStatePost ={
+    mainPosts: [postContent],
+  
+}
+const dummyPost = {
+  id : 2,
+  content : "더미데이터",
+  User : {
+    id : 1,
+    nickname : "dummy",
+  },
+  Image : [],
+  Comments : [],
+}
 
 // slice
 const user = createSlice({
@@ -40,12 +52,15 @@ const user = createSlice({
 
 const post = createSlice({
     name : "post",
-    initialState  : initialState.post,
+    initialState  : initialStatePost.mainPosts,
     reducers: {
-
+      addPost(state, actions){
+        return (state = [...state, dummyPost])
+      }
     }
 })
 
 export let { changeNickname, loginAction, logoutAction } = user.actions;
+export let { addPost } = post.actions;
 
 export { user, post };
